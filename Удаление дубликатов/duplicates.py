@@ -12,6 +12,16 @@ def cls():
     print('\033[2J\033[H', end='')
 
 
+def snils_format(x: str):
+    if len(x) == 11:
+        try:
+            return f'{x[:3]}-{x[3:6]}-{x[6:9]} {x[9:]}'
+        except:
+            return x
+    else:
+        return x
+
+
 class Person:
 
     def __init__(self, parse: bool, ids, name, dob, address, EI, J, empty_checked = False) -> None:
@@ -35,13 +45,13 @@ class Person:
             self.J = J
 
     def csv(self) -> str:
-        return f'"{", ".join(self.ids)}","{self.name}",{self.dob},"{self.address}","{self.EI}","{self.J}","{self.additional}"'
+        return f'"{", ".join(map(snils_format, self.ids))}","{self.name}",{self.dob},"{self.address}","{self.EI}","{self.J}","{self.additional}"'
 
     def __str__(self) -> str:
         return f'\tСНИЛС: "{", ".join(self.ids)}"\n\tИмя: "{self.name}"\n\tДата: {self.dob.strftime("%d.%m.%Y")}\n\tАдрес: "{self.address}"\n\tСтолбцы E-I: "{self.EI}"\n\tСтолбец J: "{self.J}"'
 
 
-with open('data/Мужчины.csv') as f1, open('data/Женщины.csv') as f2:
+with open('data/raw/Мужчины.csv') as f1, open('data/raw/Женщины.csv') as f2:
     raw_males = list(csv.reader(f1))[1:]
     raw_females = list(csv.reader(f2))[1:]
 

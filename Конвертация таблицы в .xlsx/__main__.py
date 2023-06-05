@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 import zipfile
 import re
+import sys
 from tkinter import filedialog
 from tkinter import Tk
 from tkinter import messagebox
@@ -13,10 +14,16 @@ TABLE_NS = '{urn:oasis:names:tc:opendocument:xmlns:table:1.0}'
 TEXT_NS = '{urn:oasis:names:tc:opendocument:xmlns:text:1.0}'
 
 messagebox.showinfo('Выбор входного файла', 'Для начала работы необходимо выбрать входной .odt файл')
-input_file_path = filedialog.askopenfilename()
+input_file_path = filedialog.askopenfilename(filetypes=[('Файл ODT', '*.odt')])
 
-messagebox.showinfo('Сохранить файла', 'Теперь необходимо выбрать где будет сохранён результат')
-output_file_path = filedialog.asksaveasfilename()
+if not input_file_path:
+    sys.exit(0)
+
+messagebox.showinfo('Сохранить файл', 'Теперь необходимо выбрать где будет сохранён результат')
+output_file_path = filedialog.asksaveasfilename(filetypes=[('Файл CSV', '*.csv')], defaultextension='.csv')
+
+if not output_file_path:
+    sys.exit(0)
 
 
 def get_full_text(e: ET.Element):
@@ -100,24 +107,24 @@ class Person:
         result = f'"{self.order_n}","{self.registration_n}","{self.full_name}","{self.snils}",'
 
         if self.date_of_birth:
-            result += f'"{self.date_of_birth.strftime("%d.%m.%Y")}",'
+            result += f'{self.date_of_birth.strftime("%d.%m.%Y")},'
         else:
             result += ','
 
         result += f'"{self.registration_address}","{self.residential_address}","{self.actual_address}",'
 
         if self.date_of_receipt:
-            result += f'"{self.date_of_receipt.strftime("%d.%m.%Y")}",'
+            result += f'{self.date_of_receipt.strftime("%d.%m.%Y")},'
         else:
             result += ','
         
         if self.date_of_application:
-            result += f'"{self.date_of_application.strftime("%d.%m.%Y")}",'
+            result += f'{self.date_of_application.strftime("%d.%m.%Y")},'
         else:
             result += ','
 
         if self.date_of_additional_documents:
-            result += f'"{self.date_of_additional_documents.strftime("%d.%m.%Y")}",'
+            result += f'{self.date_of_additional_documents.strftime("%d.%m.%Y")},'
         else:
             result += ','
 
@@ -134,24 +141,24 @@ class Person:
                 result += ','
 
         if self.decision_date:
-            result += f'"{self.decision_date.strftime("%d.%m.%Y")}",'
+            result += f'{self.decision_date.strftime("%d.%m.%Y")},'
         else:
             result += ','
 
         if self.payment_amount:
-            result += f'"{self.payment_amount}",'
+            result += f'"{str(self.payment_amount).replace(".", ",")}",'
         else:
             result += ','
         
         if self.payment_term_from:
-            result += f'"{self.payment_term_from.strftime("%d.%m.%Y")}",'
+            result += f'{self.payment_term_from.strftime("%d.%m.%Y")},'
         else:
             result += ','
         
         if isinstance(self.payment_term_to, str):
             result += f'"{self.payment_term_to}",'
         elif self.payment_term_to:
-            result += f'"{self.payment_term_to.strftime("%d.%m.%Y")}",'
+            result += f'{self.payment_term_to.strftime("%d.%m.%Y")},'
         else:
             result += ','
 
