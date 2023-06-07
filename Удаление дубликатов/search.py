@@ -6,7 +6,8 @@ class NVPiSVPerson:
     def __init__(self, n, id, name, gender, dob, on_pub_service, retirement_date, status, state) -> None:
         self.checked = False
         self.n = int(n)
-        self.id = ''.join(filter(str.isdecimal, id))
+        # self.id = ''.join(filter(str.isdecimal, id))
+        self.id = id.strip()
         self.name = name
         self.gender = gender
         self.dob = datetime.datetime.strptime(dob, '%d.%m.%Y')
@@ -22,7 +23,7 @@ class NVPiSVPerson:
 class Person:
 
     def __init__(self, ids, name, dob) -> None:
-        self.ids = set(ids.split(', '))
+        self.ids = ids.split(', ')
         self.name = name
         self.dob = datetime.datetime.strptime(dob, '%d.%m.%Y')
 

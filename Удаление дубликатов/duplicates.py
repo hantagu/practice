@@ -2,11 +2,6 @@ import datetime
 import csv
 import re
 
-FILES = [
-    'data/raw/Мужчины.csv',
-    'data/raw/Женщины.csv'
-]
-
 
 def cls():
     print('\033[2J\033[H', end='')
@@ -30,7 +25,7 @@ class Person:
         self.empty_checked = empty_checked
 
         if parse:
-            self.ids = set(filter(bool, map(lambda x: ''.join(filter(str.isdecimal, x)), re.split(r' {2,}', ids))))
+            self.ids = set(filter(bool, map(lambda x: ''.join(filter(str.isdecimal, x)), re.split(r' {3,}', ids))))
             self.name = name.strip().replace('\n', '').replace('"', '').upper()
             self.dob = datetime.datetime.strptime(dob, '%d.%m.%Y')
             self.address = address.strip().replace('\n', '').replace('"', '')
@@ -45,7 +40,7 @@ class Person:
             self.J = J
 
     def csv(self) -> str:
-        return f'"{", ".join(map(snils_format, self.ids))}","{self.name}",{self.dob},"{self.address}","{self.EI}","{self.J}","{self.additional}"'
+        return f'"{", ".join(map(snils_format, self.ids))}","{self.name}",{self.dob.strftime("%d.%m.%Y")},"{self.address}","{self.EI}","{self.J}","{self.additional}"'
 
     def __str__(self) -> str:
         return f'\tСНИЛС: "{", ".join(self.ids)}"\n\tИмя: "{self.name}"\n\tДата: {self.dob.strftime("%d.%m.%Y")}\n\tАдрес: "{self.address}"\n\tСтолбцы E-I: "{self.EI}"\n\tСтолбец J: "{self.J}"'
