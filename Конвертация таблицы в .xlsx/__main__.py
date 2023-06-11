@@ -36,7 +36,7 @@ def get_full_text(e: ET.Element):
 
 class Person:
 
-    def __init__(self, e: list[ET.Element]) -> None:
+    def __init__(self, e: list) -> None:
 
         # № п/п
         # регистрационный номер
@@ -172,7 +172,7 @@ class Person:
         return result
 
 
-persons: list[Person] = list()
+persons: list = list()
 
 with zipfile.ZipFile(input_file_path) as odt:
     with odt.open('content.xml') as content:
