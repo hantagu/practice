@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <title>Администрирование</title>
+    </head>
+
+    <body class="bg-light">
+
+        <header class="navbar border-bottom d-flex justify-content-center">
+            <h5 class="mt-2 mb-2">Администрирование</h5>
+        </header>
+
+        <div class="d-flex ">
+            <ul class="nav nav-pills flex-column flex-shrink-0 p-2 bg-white" style="width: 15rem;">
+                <li class="nav-item"><a href="/users" class="nav-link">Список пользователей</a></li>
+                <li class="nav-item"><a href="/groups" class="nav-link">Список групп</a></li>
+                <li class="nav-item"><a href="/courses" class="nav-link">Список курсов</a></li>
+                <hr class="m-0">
+                <li class="nav-item"><a href="/tasks-info" class="nav-link">Информация о заданиях</a></li>
+                <li class="nav-item"><a href="/groups-info" class="nav-link">Информация о группах</a></li>
+                <li class="nav-item"><a href="/group-update" class="nav-link">Добавление в группу</a></li>
+                <li class="nav-item"><a href="/course-update" class="nav-link">Редактирование курса</a></li>
+                <hr class="m-0">
+                <li class="nav-item"><a href="https://web.telegram.org/" class="nav-link">Открыть чат</a></li>
+            </ul>
+
+            <div class="container">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+
+        <footer class="d-flex justify-content-center border-top pt-4">
+            2023
+        </footer>
+
+    </body>
+
+</html>
