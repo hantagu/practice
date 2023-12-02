@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" modified="2023-12-01T16:31:17.988Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0" etag="XihmWSBULFP3bWyAgT3d" version="22.1.5" type="device">
+  <diagram name="Страница — 1" id="gxkfdnK2utW1hszuCTgD">
+    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EyVRrSSYI1lm8fvfGLFV-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="560" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="EyVRrSSYI1lm8fvfGLFV-6" value="&lt;div&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;Администрирование&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Ubuntu;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DUbuntu;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="560" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EyVRrSSYI1lm8fvfGLFV-7" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="EyVRrSSYI1lm8fvfGLFV-2" target="EyVRrSSYI1lm8fvfGLFV-20" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="250" as="sourcePoint" />
+            <mxPoint x="260" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EyVRrSSYI1lm8fvfGLFV-12" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fillStyle=hatch;" parent="1" vertex="1">
+          <mxGeometry x="200" y="90" width="380" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="EyVRrSSYI1lm8fvfGLFV-17" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="40" y="70" as="sourcePoint" />
+            <mxPoint x="600" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EyVRrSSYI1lm8fvfGLFV-19" value="&amp;nbsp;Список курсов" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Ubuntu;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DUbuntu;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="40" y="130" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EyVRrSSYI1lm8fvfGLFV-20" value="&amp;nbsp;Список пользователей" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Ubuntu;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DUbuntu;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="40" y="70" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EyVRrSSYI1lm8fvfGLFV-21" value="&lt;div align=&quot;left&quot; style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp;Список групп&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Ubuntu;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DUbuntu;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="40" y="100" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EyVRrSSYI1lm8fvfGLFV-22" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" parent="1" source="EyVRrSSYI1lm8fvfGLFV-19" target="EyVRrSSYI1lm8fvfGLFV-19" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="20" y="160" as="sourcePoint" />
+            <mxPoint x="380" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EyVRrSSYI1lm8fvfGLFV-23" value="&amp;nbsp;Добавление в группу" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Ubuntu;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DUbuntu;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="40" y="220" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EyVRrSSYI1lm8fvfGLFV-24" value="&amp;nbsp;Редактирование курса" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Ubuntu;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DUbuntu;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="40" y="250" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EyVRrSSYI1lm8fvfGLFV-25" value="&amp;nbsp;Информация о группе" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Ubuntu;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DUbuntu;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="40" y="190" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EyVRrSSYI1lm8fvfGLFV-26" value="&amp;nbsp;Информация о заданиях" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Ubuntu;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DUbuntu;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="40" y="160" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EyVRrSSYI1lm8fvfGLFV-27" value="&amp;nbsp;Открыть чат" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Ubuntu;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DUbuntu;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="40" y="390" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EyVRrSSYI1lm8fvfGLFV-28" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="EyVRrSSYI1lm8fvfGLFV-27" target="EyVRrSSYI1lm8fvfGLFV-27" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="260" as="sourcePoint" />
+            <mxPoint x="350" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZBYJQtymOKGVgoiF9jZI-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fillStyle=hatch;" vertex="1" parent="1">
+          <mxGeometry x="200" y="445" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="ZBYJQtymOKGVgoiF9jZI-2" value="Различное содержимое, в зависимости от выбранного раздела в боковом меню" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Ubuntu;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DUbuntu;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="270" y="440" width="330" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
