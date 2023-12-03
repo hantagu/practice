@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for user in users %}
+<div class="card mt-4">
+    <div class="card-header">{{user[4]}}</div>
+    <div class="card-body">
+        Логин: {{user[1]}}<br>
+        Роль: {% if user[3] == 'student' %}Студент{% elif user[3] == 'teacher' %}Преподаватель{% elif user[3] == 'curator' %}Куратор{% elif user[3] == 'admin' %}Администратор{% endif %}<br>
+        Баланс: {{user[5]}}
+    </div>
+    <div class="card-footer"><span class="fst-italic text-secondary">UUID: {{user[0]}}</div>
+</div>
+{% endfor %}
+
+{% endblock %}

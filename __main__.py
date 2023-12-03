@@ -1,7 +1,7 @@
 from database import DBHelper
 
 from dotenv import dotenv_values
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, Response, make_response, render_template
 
 
 PAGE_USERS = 'users'
@@ -16,7 +16,13 @@ PAGE_COURSE_INFO = 'course-update'
 
 app = Flask(__name__)
 config = dotenv_values('.env')
-db = DBHelper(config['POSTGRES_HOST'], config['POSTGRES_PORT'], config['POSTGRES_USER'], config['POSTGRES_PASSWD'], config['POSTGRES_DBNAME']) # type: ignore
+app.secret_key = config['APP_SECRET']
+db = DBHelper(config['POSTGRES_HOST'], config['POSTGRES_PORT'], config['POSTGRES_USER'], config['POSTGRES_PASSWD'], config['POSTGRES_DBNAME'], False) # type: ignore
+
+
+def template(page: str, **kwargs) -> Response:
+    resp = make_response(render_template(f'{page}.html', page=page, **kwargs))
+    return resp
 
 
 @app.get('/')
@@ -26,17 +32,17 @@ def index():
 
 @app.get(f'/{PAGE_USERS}')
 def users():
-    return PAGE_USERS
+    return template(PAGE_USERS, users=db.get_all_users())
 
 
 @app.get(f'/{PAGE_GROUPS}')
 def groups():
-    return PAGE_GROUPS
+    return template(PAGE_GROUPS)
 
 
 @app.get(f'/{PAGE_COURSES}')
 def courses():
-    return PAGE_COURSES
+    return template(PAGE_COURSES)
 
 
-app.run(host='localhost', port=8080)
+app.run(host=config['APP_ADDR'], port=config['APP_PORT']) # type: ignore

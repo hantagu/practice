@@ -17,14 +17,14 @@
 
         <div class="d-flex ">
             <ul class="nav nav-pills flex-column flex-shrink-0 p-2 bg-white" style="width: 15rem;">
-                <li class="nav-item"><a href="/users" class="nav-link">Список пользователей</a></li>
-                <li class="nav-item"><a href="/groups" class="nav-link">Список групп</a></li>
-                <li class="nav-item"><a href="/courses" class="nav-link">Список курсов</a></li>
+                <li class="nav-item"><a href="/users" class="nav-link {% if page == 'users' %}active{% endif %}">Список пользователей</a></li>
+                <li class="nav-item"><a href="/groups" class="nav-link {% if page == 'groups' %}active{% endif %}">Список групп</a></li>
+                <li class="nav-item"><a href="/courses" class="nav-link {% if page == 'courses' %}active{% endif %}">Список курсов</a></li>
                 <hr class="m-0">
-                <li class="nav-item"><a href="/tasks-info" class="nav-link">Информация о заданиях</a></li>
-                <li class="nav-item"><a href="/groups-info" class="nav-link">Информация о группах</a></li>
-                <li class="nav-item"><a href="/group-update" class="nav-link">Добавление в группу</a></li>
-                <li class="nav-item"><a href="/course-update" class="nav-link">Редактирование курса</a></li>
+                <li class="nav-item"><a href="/tasks-info" class="nav-link {% if page == 'tasks-info' %}active{% endif %}">Информация о заданиях</a></li>
+                <li class="nav-item"><a href="/groups-info" class="nav-link {% if page == 'groups-info' %}active{% endif %}">Информация о группах</a></li>
+                <li class="nav-item"><a href="/group-update" class="nav-link {% if page == 'group-update' %}active{% endif %}">Добавление в группу</a></li>
+                <li class="nav-item"><a href="/course-update" class="nav-link {% if page == 'course-update' %}active{% endif %}">Редактирование курса</a></li>
                 <hr class="m-0">
                 <li class="nav-item"><a href="https://web.telegram.org/" class="nav-link">Открыть чат</a></li>
             </ul>
