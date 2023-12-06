@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS "users"
 
 CREATE TABLE IF NOT EXISTS "courses"
 (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "author_id" UUID NOT NULL,
     "price" money,
     "title" varchar(256) NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS "courses"
 
 CREATE TABLE IF NOT EXISTS "groups"
 (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "course_id" UUID NOT NULL,
     "curator_id" UUID NOT NULL,
     "title" varchar(256) NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS "group_members"
 
 CREATE TABLE IF NOT EXISTS "lessons"
 (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "course_id" UUID NOT NULL,
     "teacher_id" UUID NOT NULL,
     "date" timestamptz NOT NULL,
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS "lessons"
 
 CREATE TABLE IF NOT EXISTS "tasks"
 (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "lesson_id" UUID NOT NULL,
     "student_id" UUID,
     "title" varchar(256),
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS "tasks"
 
 CREATE TABLE IF NOT EXISTS "hometasks"
 (
-    "id" UUID NOT NULL,
+    "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "task_id" UUID NOT NULL,
     "student_id" UUID NOT NULL,
     "title" varchar(256) NOT NULL,

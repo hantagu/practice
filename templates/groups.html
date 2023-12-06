@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{{ page }}
+
+{% for group in groups %}
+<div class="card mt-4">
+    <div class="card-header">{{group.title}}</div>
+    <div class="card-body">
+        Куратор: {{group.curator}}<br>
+        Курс: {{group.course}}<br>
+    </div>
+    <div class="card-footer"><span class="fst-italic text-secondary">UUID: {{group.id}}</div>
+</div>
+{% endfor %}
+
 {% endblock %}

@@ -4,13 +4,13 @@
 
 {% for user in users %}
 <div class="card mt-4">
-    <div class="card-header">{{user[4]}}</div>
+    <div class="card-header">{{user.name}}</div>
     <div class="card-body">
-        Логин: {{user[1]}}<br>
-        Роль: {% if user[3] == 'student' %}Студент{% elif user[3] == 'teacher' %}Преподаватель{% elif user[3] == 'curator' %}Куратор{% elif user[3] == 'admin' %}Администратор{% endif %}<br>
-        Баланс: {{user[5]}}
+        Логин: {{user.login}}<br>
+        Роль: {% if user.role == 'student' %}Студент{% elif user.role == 'teacher' %}Преподаватель{% elif user.role == 'curator' %}Куратор{% elif user.role == 'admin' %}Администратор{% endif %}<br>
+        Баланс: {{user.balance}}
     </div>
-    <div class="card-footer"><span class="fst-italic text-secondary">UUID: {{user[0]}}</div>
+    <div class="card-footer"><span class="fst-italic text-secondary">UUID: {{user.id}}</div>
 </div>
 {% endfor %}
 
